@@ -20,7 +20,7 @@ class Role extends Model
      */
     protected $fillable = ['name'];
 
-    protected $timestamp = false; // not to include created_at and updated_at
+    public $timestamps = false; // not to include created_at and updated_at
 
 
     public function users(): HasMany

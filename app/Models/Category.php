@@ -10,6 +10,9 @@ class Category extends Model
 {
     use HasFactory;
 
+    public static $FACTORY_RECORDS_COUNT = 0; // number of records to store in the database
+
+
     /**
      * The attributes that are mass assignable.
      *
@@ -17,7 +20,7 @@ class Category extends Model
      */
     protected $fillable = ['name'];
 
-    protected $timestamp = false; // not to include created_at and updated_at
+    public $timestamps = false; // not to include created_at and updated_at
 
 
     public function feedbacks() :HasMany
