@@ -10,6 +10,9 @@ class Comment extends Model
 {
     use HasFactory;
 
+    const FACTORY_RECORDS_COUNT = 30; // number of records to store in the database
+
+
     /**
      * The attributes that are mass assignable.
      *

@@ -15,6 +15,9 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    const FACTORY_RECORDS_COUNT = 10; // number of records to store in the database
+
+
     /**
      * The attributes that are mass assignable.
      *

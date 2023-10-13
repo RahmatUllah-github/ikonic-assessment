@@ -11,6 +11,9 @@ class Feedback extends Model
 {
     use HasFactory;
 
+    const FACTORY_RECORDS_COUNT = 20; // number of records to store in the database
+
+
     /**
      * The attributes that are mass assignable.
      *
