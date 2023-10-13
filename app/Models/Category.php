@@ -6,12 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Role extends Model
+class Category extends Model
 {
     use HasFactory;
-
-    const USER = 1; // user role id
-    const ADMIN = 2; // admin role id
 
     /**
      * The attributes that are mass assignable.
@@ -23,8 +20,8 @@ class Role extends Model
     protected $timestamp = false; // not to include created_at and updated_at
 
 
-    public function users(): HasMany
+    public function feedbacks() :HasMany
     {
-        return $this->hasMany(User::class);
+        return $this->hasMany(Feedback::class);
     }
 }
