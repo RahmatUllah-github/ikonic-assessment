@@ -1,7 +1,7 @@
 <?php
 
 use App\Models\Feedback;
-use App\Models\Like;
+use App\Models\Vote;
 use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -14,11 +14,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('likes', function (Blueprint $table) {
+        Schema::create('votes', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class)->constrained()->onDelete('cascade');
             $table->foreignIdFor(Feedback::class)->constrained()->onDelete('cascade');
-            $table->enum('type', [Like::LIKE, Like::UNLIKE]);
+            $table->enum('vote', [Vote::LIKE, Vote::UNLIKE]);
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('likes');
+        Schema::dropIfExists('votes');
     }
 };
