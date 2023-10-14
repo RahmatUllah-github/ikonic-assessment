@@ -8,6 +8,9 @@ export default defineConfig({
             input: [
                 'resources/sass/app.scss',
                 'resources/js/app.js',
+                'node_modules/admin-lte/dist/css/adminlte.css',
+                'node_modules/admin-lte/dist/js/adminlte.js',
+                'node_modules/@fortawesome/fontawesome-free/css/all.min.css',
             ],
             refresh: true,
         }),
