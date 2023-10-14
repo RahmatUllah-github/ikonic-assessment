@@ -65,11 +65,11 @@ class Feedback extends Model
 
     public function likes(): HasMany
     {
-        return $this->hasMany(Like::class)->whereType(Like::LIKE);
+        return $this->hasMany(Vote::class)->whereVote(Vote::LIKE);
     }
 
     public function unlikes(): HasMany
     {
-        return $this->hasMany(Like::class)->whereType(Like::UNLIKE);
+        return $this->hasMany(Vote::class)->whereVote(Vote::UNLIKE);
     }
 }
