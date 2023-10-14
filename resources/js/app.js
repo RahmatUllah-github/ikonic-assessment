@@ -7,6 +7,13 @@
 import './bootstrap';
 import { createApp } from 'vue';
 
+import 'admin-lte/dist/css/adminlte.css';
+import 'admin-lte/dist/js/adminlte.js';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+// Your other JavaScript imports and code here
+
+
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
  * registering components with the application instance so they are ready
@@ -16,7 +23,9 @@ import { createApp } from 'vue';
 const app = createApp({});
 
 import ExampleComponent from './components/ExampleComponent.vue';
+import SidebarComponent from './components/SidebarComponent.vue';
 app.component('example-component', ExampleComponent);
+app.component('sidebar-component', SidebarComponent);
 
 /**
  * The following block of code may be used to automatically register your
